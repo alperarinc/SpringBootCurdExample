@@ -2,9 +2,11 @@ package com.springbootjpacrudapi.Project.service;
 
 import com.springbootjpacrudapi.Project.entity.Product;
 import com.springbootjpacrudapi.Project.repository.ProductRepositroy;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductService {
 
     private ProductRepositroy productRepositroy;
@@ -13,9 +15,11 @@ public class ProductService {
     public Product save(Product product){
         return productRepositroy.save(product);
     }
+
     public List<Product> saves(List<Product> products){
         return productRepositroy.saveAll(products);
     }
+
     public List<Product> products() {
         return productRepositroy.findAll();
     }
